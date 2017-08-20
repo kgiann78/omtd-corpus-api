@@ -6,6 +6,8 @@ package eu.openminted.corpus;
 public enum CorpusStatus {
     SUBMITTED,
     PROCESSING,
+    PROCESSING_METADATA,
+    PROCESSING_FULLTEXT,
     CREATED,
     CANCELED,
     DELETED
