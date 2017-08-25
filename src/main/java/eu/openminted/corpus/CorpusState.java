@@ -58,4 +58,16 @@ public class CorpusState {
     public void setCurrentProgress(int currentProgress) {
         this.currentProgress = currentProgress;
     }
+
+    @Override
+    public String toString() {
+        return "CorpusState{" +
+                "id='" + id + '\'' +
+                ", connector='" + connector + '\'' +
+                ", totalHits=" + totalHits +
+                ", totalFulltext=" + totalFulltext +
+                ", currentStatus=" + currentStatus +
+                ", currentProgress=" + currentProgress +
+                '}';
+    }
 }
