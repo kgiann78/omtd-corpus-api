@@ -71,6 +71,30 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>cz.habarta.typescript-generator</groupId>
+                <artifactId>typescript-generator-maven-plugin</artifactId>
+                <version>1.27.339</version>
+                <executions>
+                    <execution>
+                        <id>generate1</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <jsonLibrary>jackson2</jsonLibrary>
+                            <outputFileType>implementationFile</outputFileType>
+                            <mapEnum>asEnum</mapEnum>
+                            <mapClasses>asClasses</mapClasses>
+                            <classPatterns>
+                                <pattern>eu.openminted.corpus.CorpusBuildingState</pattern>
+                            </classPatterns>
+                            <outputFile>target/corpusBuildingState-model.ts</outputFile>
+                            <outputKind>module</outputKind>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
         <finalName>omtd-corpus-api</finalName>
     </build>
