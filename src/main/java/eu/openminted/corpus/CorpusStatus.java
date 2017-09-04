@@ -10,5 +10,6 @@ public enum CorpusStatus {
     PROCESSING_FULLTEXT,
     CREATED,
     CANCELED,
-    DELETED
+    DELETED,
+    FAILED
 }
