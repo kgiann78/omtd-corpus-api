@@ -4,6 +4,7 @@ package eu.openminted.corpus;
  * CorpusStatus enum, informs the status of a corpus
  */
 public enum CorpusStatus {
+    INITIATING,
     SUBMITTED,
     PROCESSING,
     PROCESSING_METADATA,
