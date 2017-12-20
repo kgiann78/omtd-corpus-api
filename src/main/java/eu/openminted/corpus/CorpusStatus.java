@@ -6,6 +6,7 @@ package eu.openminted.corpus;
 public enum CorpusStatus {
     INITIATING,
     SUBMITTED,
+    EMPTY,
     PROCESSING,
     PROCESSING_METADATA,
     PROCESSING_FULLTEXT,
