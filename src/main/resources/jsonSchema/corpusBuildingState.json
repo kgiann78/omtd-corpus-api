@@ -1,16 +1,15 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/openminted/omtd-registry/develop/omtd-registry-api/src/main/resources/jsonSchema/corpusBuildingState.json",
+  "extends": {
+    "$ref": "identifiableResource.json"
+  },
+  "allOf": [
+    {
+      "$ref": "identifiableResource.json"
+    }
+  ],
   "properties": {
-    "id": {
-      "description": "The id of the corpus building id (UUID)",
-      "title": "ID",
-      "type": "string"
-    },
-    "token": {
-      "description": "The access token for current user",
-      "title": "Access Token",
-      "type": "string"
-    },
     "connector": {
       "description": "The name of the current content-connector",
       "title": "Content Connector",
@@ -34,7 +33,19 @@
     "currentStatus": {
       "description": "Status of current corpus building process",
       "title": "Current corpus status",
-      "type": "string"
+      "type": "string",
+      "enum": [
+        "INITIATING",
+        "SUBMITTED",
+        "EMPTY",
+        "PROCESSING",
+        "PROCESSING_METADATA",
+        "PROCESSING_FULLTEXT",
+        "CREATED",
+        "CANCELED",
+        "DELETED",
+        "FAILED"
+      ]
     },
     "metadataProgress": {
       "description": "Number of metadata processed",
@@ -53,4 +64,3 @@
   ],
   "type": "object"
 }
-

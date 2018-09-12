@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/openminted/omtd-registry/develop/omtd-registry-api/src/main/resources/jsonSchema/identifiableResource.json",
+  "javaType": "eu.openminted.registry.domain.base.ResourceIdentifier",
+  "type": "object",
+  "properties": {
+    "omtdId": {
+      "type": "string"
+    },
+    "personIdentifier": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "omtdId",
+    "personIdentifier"
+  ],
+  "additionalProperties": false
+}

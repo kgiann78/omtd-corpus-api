@@ -6,7 +6,7 @@
 
     <groupId>eu.openminted</groupId>
     <artifactId>omtd-corpus-api</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
 
@@ -48,8 +48,8 @@
                 <artifactId>jsonschema2pojo-maven-plugin</artifactId>
                 <version>0.4.37</version>
                 <configuration>
-                    <sourceDirectory>${basedir}/src/main/resources/jsonSchema</sourceDirectory>
-                    <targetPackage>${project.groupId}.corpus</targetPackage>
+                    <sourceDirectory>${basedir}/src/main/resources/jsonSchema/corpusBuildingState.json</sourceDirectory>
+                    <targetPackage>${project.groupId}.registry.domain.connector</targetPackage>
                     <outputDirectory>target/generated-sources/jsonSchema</outputDirectory>
                     <includeAdditionalProperties>false</includeAdditionalProperties>
                 </configuration>
@@ -77,7 +77,7 @@
                             <mapEnum>asEnum</mapEnum>
                             <mapClasses>asClasses</mapClasses>
                             <classPatterns>
-                                <pattern>eu.openminted.corpus.CorpusBuildingState</pattern>
+                                <pattern>${project.groupId}.registry.domain.connector.CorpusBuildingState</pattern>
                             </classPatterns>
                             <outputFile>target/corpusBuildingState-model.ts</outputFile>
                             <outputKind>module</outputKind>
